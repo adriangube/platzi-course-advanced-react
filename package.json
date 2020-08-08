@@ -1,0 +1,28 @@
+{
+  "name": "platzi-course-advanced-react",
+  "version": "1.0.0",
+  "description": "This app it's the result of my own expirience going through the [Platzi](https://platzi.com/) course about Advanced [React](https://reactjs.org/). You can know more about Platzi and his profesional courses in their [website](https://platzi.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "webpack-dev-server --hot --inline --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriangube/platzi-course-advanced-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriangube/platzi-course-advanced-react/issues"
+  },
+  "homepage": "https://github.com/adriangube/platzi-course-advanced-react#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
