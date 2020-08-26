@@ -4,6 +4,7 @@ import {Logo} from "./components/Logo";
 import {GlobalStyle} from "./styles/GlobalStyles";
 import {PhotoCardWithQuery} from "./container/PhotoCardWithQuery";
 import {Home} from "./pages/Home";
+import {Router} from "@reach/router";
 
 
 export const App = () => {
@@ -16,7 +17,10 @@ export const App = () => {
       {
         detailId
         ? <PhotoCardWithQuery id={detailId}/>
-          : <Home/>
+          : <Router>
+              <Home path="/"/>
+              <Home path="/pet/:id"/>
+          </Router>
       }
     </div>
   )
