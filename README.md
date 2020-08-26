@@ -38,10 +38,10 @@ npm run serve
 
 ## Run local api
 
-In order to run the api, you need open a new tab of the terminal and change the directory to api folder.
+In order to run the api, you need open a new tab of the terminal in the project directory and change the current directory to api folder.
 
 ```
-cd api
+cd api/
 ```
 
 ## Install api dependences
