@@ -1,23 +1,30 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import { App } from "./App";
-import {ApolloClient, HttpLink} from "apollo-boost";
+import ApolloClient from "apollo-boost";
 import {ApolloProvider} from "react-apollo";
 import {API_BASE_URL} from "./constants";
-import {InMemoryCache} from "apollo-cache-inmemory";
 import Context from "./Context";
 
-
-
-const cache = new InMemoryCache()
-const link = new HttpLink({
-  uri: `${API_BASE_URL}/graphql`
-})
-
 const client = new ApolloClient({
-  cache,
-  link
-});
+  uri: `${API_BASE_URL}/graphql`,
+  request: operation => {
+    const token = window.sessionStorage.getItem('token')
+    const authorization = token ? `Bearer ${token}` : ''
+    operation.setContext({
+      headers: {
+        authorization
+      }
+    })
+  },
+  onError: error => {
+    const {networkError} = error;
+    if(networkError && networkError.result.code === 'invalid_token'){
+      window.sessionStorage.removeItem('token');
+      window.location.href= '/';
+    }
+  }
+})
 
 ReactDOM.render(
   <Context.Provider >
