@@ -4,6 +4,8 @@ This app it's the result of my own expirience going through the [Platzi](https:/
 
 Platzi Petgram it's a PWA application inspired in Instagram that allows you to see beautiful photograph of animals, and see your most liked photographs.
 
+![Petgram Demo](demo/petgram.gif)
+
 ## What is this project and what is not
 
 The purpose of this project is purely educational, it is not a project suitable for production or for profit. The only objective is to show the knowledge acquired during the react course and to share my experience.
